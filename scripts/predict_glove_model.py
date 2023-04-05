@@ -70,5 +70,10 @@ query(v1, 10)
 v1 = nlp(u'mouse').vector - nlp(u'computer').vector
 query(v1, 10)
 # %%
-v1 = nlp(u'mouse').vector - nlp(u'computer').vector
-query(v1, 10)
+# sentence = 'I think she like mouse'
+sentence = 'I feel sad to hear that you lost to a 5 years old kid'
+for word in sentence.split(' '):
+    print(word)
+    v1 = nlp(word).vector
+    query(v1, 2)
+# %%
